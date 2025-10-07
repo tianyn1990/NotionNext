@@ -190,8 +190,9 @@ git_commit_and_push() {
     # 添加镜像文件和配置
     git add docker-images/${IMAGE_NAME}-latest.tar.gz
     git add docker-images/build-info.txt
-    git add blog.config.js docker-compose.yml Dockerfile .env .gitignore
-    git add *.sh
+    # git add blog.config.js docker-compose.yml Dockerfile .env .gitignore
+    git add blog.config.js docker-compose.yml Dockerfile .gitignore
+    # git add *.sh
 
     # 检查是否有变更
     if git diff --cached --quiet; then
@@ -248,11 +249,11 @@ main() {
     echo "=========================================="
     echo ""
 
-    check_prerequisites
-    build_image
-    save_and_compress
-    cleanup_old_images
-    update_gitignore
+    # check_prerequisites
+    # build_image
+    # save_and_compress
+    # cleanup_old_images
+    # update_gitignore
     git_commit_and_push
     print_summary
 }
