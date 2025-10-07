@@ -2,10 +2,13 @@ version: '3.8'
 
 services:
   notionnext:
+    # 使用镜像,而非重新构建
+    image: notionnext:latest        # 使用上传的镜像
+
     # 使用本地Dockerfile构建镜像
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
 
     # 容器名称
     container_name: notionnext
