@@ -53,3 +53,9 @@ package-lock.json
 #
 #
 .env
+
+# Docker构建产物（保留镜像文件，忽略其他）
+docker-images/*.tar
+docker-images/*.log
+node_modules/
+.next/
