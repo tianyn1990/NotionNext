@@ -249,11 +249,11 @@ main() {
     echo "=========================================="
     echo ""
 
-    # check_prerequisites
-    # build_image
-    # save_and_compress
-    # cleanup_old_images
-    # update_gitignore
+    check_prerequisites
+    build_image
+    save_and_compress
+    cleanup_old_images
+    update_gitignore
     git_commit_and_push
     print_summary
 }
